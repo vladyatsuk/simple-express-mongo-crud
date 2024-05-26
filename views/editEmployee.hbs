@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit user</title>
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/userForm.css">
+</head>
+{{> header}}
+<body>
+  <h1>Edit employee</h1>
+  <form action="" id="editForm">
+  <ul>
+    <li>
+      <label for="lastName">Прізвище:</label>
+      <input type="text" name="lastName" value="{{lastName}}"/>
+    </li>
+    <li>
+      <label for="roomNumber">Номер кімнати:</label>
+      <input type="text" name="roomNumber" value="{{roomNumber}}"/>
+    </li>
+    <li>
+      <input type="hidden" name="id" value="{{_id}}">
+    </li>
+    <li>
+      <button type="button" id="edit">Edit</button>
+    </li>
+  </ul>
+</form>
+<script src="/edit.js"></script>
+</body>
+</html>

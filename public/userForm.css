@@ -1,0 +1,23 @@
+form {
+  width: 350px;
+  margin: auto;
+  input {
+    width: 200px;
+  }
+  label {
+    display: inline-block;
+    min-width: 110px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  button {
+    width: 100px;
+    margin-left: 125px;
+  }
+}

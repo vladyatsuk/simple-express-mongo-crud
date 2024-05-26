@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>All employees</title>
+    <link rel='stylesheet' href='/header.css' />
+    <style>
+      .json {
+        display: block;
+        color: #000000;
+        width: 100px;
+        border: 1px solid black;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    {{> header}}
+    <h1>Employees</h1>
+    <table>
+      <tr>
+        <th>Last Name</th>
+        <th>Room number</th>
+        <th>Actions</th>
+      </tr>
+      {{#each employees}}
+        <tr>
+          <td>{{lastName}}</td>
+          <td>{{roomNumber}}</td>
+          <td class='actions'>
+            <a href='employee/edit/{{_id}}?lastName={{lastName}}&roomNumber={{roomNumber}}'>Edit</a>
+            <button class="delete" data-id="{{_id}}" type="button">Delete</button>
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+    <a href="/api/employees/json" class="json">JSON</a>
+    <script src="/delete.js"></script>
+  </body>
+</html>
